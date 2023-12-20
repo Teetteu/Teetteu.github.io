@@ -1,3 +1,13 @@
+@media screen {
+    @font-face {
+        font-family: 'kirby';
+        src: url('fonts/kirby-classic.ttf') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+    }
+}
+
+
 body{
   margin: 0px;
   width: 100%;
@@ -13,10 +23,27 @@ header{
     background-color: rgb(250, 138, 175);
     padding: 10px;
     
+    
+}
+nav > a{
+    padding: 15px 25px;
+}
+
+a{
+    font-family: 'kirby';
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+a:hover{
+    color: rgba(247, 0, 82, 0.685);
 }
 
 .img-flex{
-    height: 400px;
+    display: block;
+    max-height: 400px;
+    min-height: 150px;
     margin: 35px;
     margin-right: 40px;
     float: inline-end;
@@ -24,15 +51,9 @@ header{
     
 }
 
-.pict-img{
-    height: 350px;
-}
-
-.grid{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    
-    
+.card-img{
+    max-height: 350px;
+   
 }
 
 .animation{
@@ -48,26 +69,44 @@ section{
     justify-content: center;
 
     margin: 15px;
-    height: 460px;
-    width: 350px;
-    border: 2px solid black;
+    max-height: 460px;
+    min-height: 250px;
+    max-width: 350px;
+    min-width: 250px;
+    
+    border: 3px solid rgb(255, 196, 0);
     padding-bottom: 10px;
     text-align: center;
+    box-shadow: 3px 2px 10px rgb(146, 139, 137);
+
+    font-family: 'kirby';
+    font-size: 25px;
+    padding: 5px;
+    color: rgba(247, 0, 82, 0.685);
+
     
     
 }
 
 section:hover{
-    background-color: rgb(255, 220, 243);
+    background-color: rgba(236, 203, 95, 0.329);
     transition: 0.3s;
 }
 
 h2{
-    color: rgb(179, 46, 90);
+    font-family: 'kirby', sans-serif;
+    color: rgba(247, 0, 82, 0.685);
     font-size: 50px;
     
     padding: 15px;
     padding-bottom: 0px;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    
+    
 }
 
 #parag{
@@ -77,9 +116,93 @@ h2{
     padding: 15px;
     text-align: justify;
     box-sizing: 100px;
+    color: rgb(34, 34, 34);
     
 
 }
+
+/* button */
+
+label{
+    width: 70px;
+    height: 30px;
+    position: relative;
+    display: block;
+    background-color: white;
+    border-radius: 200px;
+    box-shadow: inset 0px -2px 3px black;
+    cursor: pointer;
+    transition: 0.3s;
+    float: right;
+}
+
+label::after{
+    content: "";
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    left: 3px;
+    background-color: rgb(255, 166, 0);
+    border-radius: 100%;
+    transition: 0.3s;
+}
+
+input{
+    width: 0;
+    height: 0;
+    visibility: hidden;
+    
+}
+
+input:checked + label{
+    background-color: gray;
+    transition: 0.3;
+}
+
+input:checked + label::after{
+    left: 38px;
+    transform: translateX(28px);
+    background: blue; 
+    
+    
+}
+
+.flex-btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+ }
+
+ .dark-img{
+    position: absolute;
+    height: 50px;
+    border-radius: 100%;
+    z-index: 100;
+    left: 22px;
+    transition: 0.3;
+    fill: black;
+    bottom: 1px;
+    
+ }
+
+ .light-img{
+    position: absolute;
+    height: 50px;
+    border-radius: 100%;
+    z-index: 100;
+    left: -15px;
+    transition: 0.3;
+    fill: white;
+ }
+
+ input:checked + label .light-img{
+    fill: orange;
+ }
+
+ input:checked + label .dark-img{
+    fill: blue;
+ }
 
 @keyframes Fanimation {
     0%{ 
@@ -96,29 +219,12 @@ h2{
 }
 
 @media screen and (max-width: 1084px) {
-    
-    section{
-        height: 250px;
-        width: 150px;
-    }
+.img-flex{
+    margin: auto;
+    float: none; 
+}
 
-    .grid{
-        
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        
-    }
-
-    .pict-img{
-        height: 150px;
-    }
-
-    .img-flex{
-        
-        height: 200px;
-        margin: 35px auto;
-        padding-bottom: 200px;
-        float: none;
-        
-    }
+.card-img{
+    height: 250px;
+}
 }
