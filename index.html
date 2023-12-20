@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,17 +10,32 @@
 <body>
     <header>
         <h3></h3>
-        <nav>
+        <nav class="link">
             <a href="#">Home</a>
             <a href="#">Sobre</a>
-            <a href="#">Bosses</a>
+            <a href="#bosses">Bosses</a>
+
+
+            <div class="flex-bnt">
+    
+                <input type="checkbox" id="darkmode-btn" class="flex-btn" >
+                <label for="darkmode-btn">
+
+                <img src="https://www.spriters-resource.com/resources/sheet_icons/3/3016.png?updated=1460947822" alt="" class="dark-img">
+                
+                <img src="https://www.spriters-resource.com/resources/sheet_icons/3/3014.png?updated=1460947822" alt="" class="light-img">
+                
+            </label>
+
+
+            </div>
         </nav>
     </header>
 
     <main>
 
         <div class="img-flex" class="animation">
-            <img src="https://kirby.nintendo.com/assets/img/intro/kirby-star2.png" alt="kirby" class="animation">
+            <img src="https://kirby.nintendo.com/assets/img/intro/kirby-star2.png" alt="kirby" class="animation" >
         </div>
 
         <h2>Sobre o jogo Kirby</h2>
@@ -31,20 +46,22 @@
 
     <hr>
 
-    <h2>Top 3 Bosses</h2>
+    <h2 id="bosses">Top 3 Bosses</h2>
 
     <div class="grid">
         <section>
             <div>Marx</div>
-            <img src="https://cdn.wikirby.com/thumb/1/10/KSA_Marx_Artwork.png/640px-KSA_Marx_Artwork.png" alt="" class="pict-img">
+            <img src="https://cdn.wikirby.com/thumb/1/10/KSA_Marx_Artwork.png/640px-KSA_Marx_Artwork.png" alt="" class="card-img">
         </section>
+
         <section>
             <div>King Dedede</div>
-            <img src="https://ssb.wiki.gallery/images/thumb/f/f5/King_Dedede_SSBU.png/800px-King_Dedede_SSBU.png" alt="" class="pict-img">
+            <img src="https://ssb.wiki.gallery/images/thumb/f/f5/King_Dedede_SSBU.png/800px-King_Dedede_SSBU.png" alt="" class="card-img">
         </section>
+
         <section>
             <div>Meta Knight</div>
-            <img src="img/meta.webp" alt="" class="pict-img">
+            <img src="img/meta.webp" alt="" class="card-img">
         </section>
     </div>
 
