@@ -162,7 +162,7 @@ label{
     background-color: rgb(250, 250, 250);
     background: linear-gradient(to right, #f85b21, #fda539);
     border-radius: 200px;
-    box-shadow: inset 0px -2px 3px black;
+    box-shadow: inset 0px -2px 5px rgb(116, 35, 3);
     cursor: pointer;
     transition: 0.3s;
     
@@ -191,6 +191,7 @@ input{
 input:checked + label{
     background: linear-gradient(to right, #100a6b, #2553eb);
     transition: 0.3;
+    box-shadow: inset 0px -2px 5px rgb(1, 2, 37);
 }
 
 input:checked + label::after{
