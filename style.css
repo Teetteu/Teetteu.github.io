@@ -7,10 +7,33 @@
     }
 }
 
+/* Dark-mode */
+.dark-mode:root{
+    --body-bg: #313131;
+    --header-bg: rgb(250, 138, 175);
+    --link-color: #fff;
+    --linkhover: rgba(247, 0, 82, 0.685);
+    --parag: rgb(226, 226, 226);
+    --h2: rgba(253, 61, 141, 0.685);
+    
+}
+
+/* Light-mode */
+:root{
+    --body-bg: #fff;
+    --header-bg: rgb(250, 138, 175);
+    --link-color: #fff;
+    --linkhover: rgba(247, 0, 82, 0.685);
+    --parag: rgb(34, 34, 34);
+    --h2: rgba(247, 0, 82, 0.685);
+    
+}
+
 
 body{
   margin: 0px;
   width: 100%;
+  background-color: var(--body-bg);
 }
 
 header{
@@ -20,29 +43,33 @@ header{
     align-items: center;
     justify-content: center;
 
-    background-color: rgb(250, 138, 175);
+    background-color: var(--header-bg);
     padding: 10px;
     
     
 }
-nav > a{
-    padding: 15px 25px;
+nav{
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: space-around;
+   gap: 30px;
 }
 
 a{
     font-family: 'kirby';
     font-size: 20px;
-    color: white;
+    color: var(--link-color);
     text-decoration: none;
 }
 
 a:hover{
-    color: rgba(247, 0, 82, 0.685);
+    color: var(--linkhover);
 }
 
 .img-flex{
-    display: block;
-    max-height: 400px;
+    display: flex;
+    height: 400px;
     min-height: 150px;
     margin: 35px;
     margin-right: 40px;
@@ -95,7 +122,7 @@ section:hover{
 
 h2{
     font-family: 'kirby', sans-serif;
-    color: rgba(247, 0, 82, 0.685);
+    color: var(--h2);
     font-size: 50px;
     
     padding: 15px;
@@ -116,7 +143,7 @@ h2{
     padding: 15px;
     text-align: justify;
     box-sizing: 100px;
-    color: rgb(34, 34, 34);
+    color: var(--parag);
     
 
 }
@@ -124,16 +151,22 @@ h2{
 /* button */
 
 label{
+   
     width: 70px;
     height: 30px;
     position: relative;
-    display: block;
-    background-color: white;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+
+    background-color: rgb(250, 250, 250);
+    background: linear-gradient(to right, #f85b21, #fda539);
     border-radius: 200px;
     box-shadow: inset 0px -2px 3px black;
     cursor: pointer;
     transition: 0.3s;
-    float: right;
+    
+    
 }
 
 label::after{
@@ -142,27 +175,28 @@ label::after{
     height: 28px;
     position: absolute;
     left: 3px;
-    background-color: rgb(255, 166, 0);
+    background-color: rgb(255, 72, 0);
     border-radius: 100%;
-    transition: 0.3s;
+    transition: 0.6s;
+    
 }
 
 input{
     width: 0;
     height: 0;
-    visibility: hidden;
+    visibility: visible;
     
 }
 
 input:checked + label{
-    background-color: gray;
+    background: linear-gradient(to right, #100a6b, #2553eb);
     transition: 0.3;
 }
 
 input:checked + label::after{
     left: 38px;
-    transform: translateX(28px);
-    background: blue; 
+    transform: translateX(2px);
+    background: rgb(177, 177, 177); 
     
     
 }
@@ -174,35 +208,82 @@ input:checked + label::after{
     align-items: flex-end;
  }
 
+
  .dark-img{
     position: absolute;
-    height: 50px;
+    height: 45px;
     border-radius: 100%;
     z-index: 100;
-    left: 22px;
-    transition: 0.3;
+    left: 27px;
+    transition: 0.3s;
     fill: black;
-    bottom: 1px;
+    bottom: -7px;
+    transform: scale(0);
+    
     
  }
 
  .light-img{
     position: absolute;
-    height: 50px;
+    height: 45px;
     border-radius: 100%;
     z-index: 100;
-    left: -15px;
-    transition: 0.3;
-    fill: white;
+    left: -11px;
+    bottom: -3px;
+    transition: 0.3s;
+    fill: rgb(255, 255, 255);
+    
  }
 
  input:checked + label .light-img{
-    fill: orange;
+    fill: rgb(43, 28, 0);
+    transform: scale(0);
+    
  }
 
  input:checked + label .dark-img{
     fill: blue;
+    transform: scale(1);
+    
  }
+
+@media screen and (max-width: 1084px) {
+.img-flex{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 300px;
+        margin: 35px;
+        
+        float: none;
+        padding-bottom: 0px;
+        
+    }
+    #parag{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding-top: 5px;
+    font-size: 25px;
+    padding: 15px;
+    text-align: justify;
+    box-sizing: auto;
+    color: var(--parag);
+    }
+    
+
+.card-img{
+    height: 250px;
+    
+}
+
+.grid{
+    grid-template-columns: repeat(1, 1fr);
+}
+}
+
 
 @keyframes Fanimation {
     0%{ 
@@ -215,16 +296,4 @@ input:checked + label::after{
         transform: translate(0px);
     }
 
-    
-}
-
-@media screen and (max-width: 1084px) {
-.img-flex{
-    margin: auto;
-    float: none; 
-}
-
-.card-img{
-    height: 250px;
-}
 }
