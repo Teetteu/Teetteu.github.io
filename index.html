@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br" data-theme="light">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,11 +19,13 @@
             <div class="flex-bnt">
     
                 <input type="checkbox" id="darkmode-btn" class="flex-btn" >
-                <label for="darkmode-btn">
+                <label for="darkmode-btn" onchange="mudar"()>
 
                 <img src="https://www.spriters-resource.com/resources/sheet_icons/3/3016.png?updated=1460947822" alt="" class="dark-img">
                 
                 <img src="https://www.spriters-resource.com/resources/sheet_icons/3/3014.png?updated=1460947822" alt="" class="light-img">
+                
+                    <div id="theme"></div>
                 
             </label>
 
@@ -35,17 +37,18 @@
     <main>
 
         <div class="img-flex" class="animation">
-            <img src="https://kirby.nintendo.com/assets/img/intro/kirby-star2.png" alt="kirby" class="animation" >
+            <img src="https://kirby.nintendo.com/assets/img/intro/kirby-star2.png" alt="kirby" class="img-flex animation">
         </div>
 
         <h2>Sobre o jogo Kirby</h2>
         <div id="parag">
             A série gira em torno das aventuras do jovem rosado herói alien titular chamado Kirby enquanto ele luta para salvar seu lar no distante planeta de Pop Star de diversas ameaças. A maioria dos jogos na série são jogos de plataforma de rolagem lateral com elementos de beat 'em up e solução de quebra-cabeças. Kirby possui a habilidade de inalar inimigos e objetos com sua boca, cuspindo-os como um projétil ou comendo-os. Se ele comer certas coisas, ele pode ganhar os poderes ou propriedades daquele objeto, seja uma nova arma ou habilidade, denominada Habilidade de Cópia (Copy Ability). A série tem a intenção de ser de fácil acesso mesmo para pessoas pouco familiarizadas com jogos de ação, ao mesmo tempo oferecendo profundidade e desafios adicionais para jogadores mais experientes.
+            
         </div>
     </main>
 
     <hr>
-
+    
     <h2 id="bosses">Top 3 Bosses</h2>
 
     <div class="grid">
@@ -64,6 +67,9 @@
             <img src="img/meta.webp" alt="" class="card-img">
         </section>
     </div>
+
+    
+    <script src="script.js"></script>
 
 </body>
 </html>
