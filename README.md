@@ -1,1 +1,1 @@
-<h1> Veja o projeto aqui: <a href= "teetteu.github.io/kirby-site/" target="_blank">https://www.w3schools.com</a></h1>
+<h1> Veja o projeto aqui: <a href= "teetteu.github.io/kirby-site/" target="_blank">https://teetteu.github.io/kirby-site/</a></h1>
