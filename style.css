@@ -34,6 +34,7 @@ body{
   margin: 0px;
   width: 100%;
   background-color: var(--body-bg);
+  font-family: 'kirby';
 }
 
 header{
