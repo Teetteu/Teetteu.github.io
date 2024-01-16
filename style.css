@@ -1,7 +1,7 @@
 @media screen {
     @font-face {
         font-family: 'kirby';
-        src: url('kirby-classic.ttf') format('woff2');
+        src: url('kirby-classic.ttf') format('ttf');
         font-weight: normal;
         font-style: normal;
     }
